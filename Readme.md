@@ -2,7 +2,7 @@
 
 clone this repository in ~/.config/bash/
 ```bash
-git clone git@github.com:augusto-cesar-dsr/bash-config.git ~/.config/bash
+git clone https://github.com/augusto-cesar-dsr/bash-config.git ~/.config/bash
 ```
 
 then run:

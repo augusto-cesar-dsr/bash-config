@@ -1,6 +1,10 @@
 # This is my bash config modular 
 
 clone this repository in ~/.config/bash/
+```bash
+git clone git@github.com:augusto-cesar-dsr/bash-config.git ~/.config/bash
+```
+
 then run:
 ```bash
 touch ~/.config/bash/bash_specifics_cmds.sh

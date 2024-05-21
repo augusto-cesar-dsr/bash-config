@@ -10,6 +10,8 @@ then run:
 touch ~/.config/bash/bash_specifics_cmds.sh
 echo 'source "$HOME/.config/bash/imports.sh"' >> ~/.bashrc
 ```
+
+and restart the terminal, or run `source ~/.bashrc`
 ## Files
 - .bash_aliases: this is a file with alias to your system
 

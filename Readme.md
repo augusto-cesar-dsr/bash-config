@@ -13,8 +13,6 @@ echo 'source "$HOME/.config/bash/imports.sh"' >> ~/.bashrc
 
 and restart the terminal, or run `source ~/.bashrc`
 ## Files
-- .bash_aliases: this is a file with alias to your system
-
 
 - bash_specifics_cmds.sh: is a file with some information for not share, is in this file you should create a `export PROJECTS_ROOT_PATH='root path to yours projects'`
 

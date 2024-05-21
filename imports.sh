@@ -1,7 +1,7 @@
-
-source "$HOME/.config/bash/.bash_aliases"
-source "$HOME/.config/bash/bash_functions.sh"
-source "$HOME/.config/bash/bash_variables.sh"
-source "$HOME/.config/bash/bash_specifics_cmds.sh"
 source "$HOME/.config/bash/clis/default.sh"
 
+file_paths=$(find $HOME/.config/bash/ -type f -name "bash_*.sh")
+
+for file in $file_paths; do
+  source "$file"
+done

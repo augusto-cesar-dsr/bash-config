@@ -65,3 +65,17 @@ _project_path_auto_complete() {
 
 # link autocompletion in to function autocompletion
 complete -F _project_path_auto_complete project_path
+
+############### to servicies
+
+function who_service_use_port(){
+  sudo lsof -i -P -n | grep $1
+}
+
+function stop_service() {
+  sudo systemctl stop $1
+}
+
+function suspend_pc() {
+  sudo sleep 30 ; systemctl suspend
+}

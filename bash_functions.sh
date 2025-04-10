@@ -76,6 +76,10 @@ function stop_service() {
   sudo systemctl stop $1
 }
 
-function suspend_pc() {
-  sudo sleep 30 ; systemctl suspend
+function power_options() {
+  /home/$USER/.config/bash/bin/logout
+}
+
+function change_display() {
+  /home/$USER/.config/bash/bin/rofi_change_display
 }

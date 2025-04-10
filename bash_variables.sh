@@ -37,6 +37,7 @@ alias frs='foreman s'
 ### SOFTWARES ALIASES ###
 #########################
 alias vim=nvim
+alias svim='sudo /opt/nvim-linux64/bin/nvim'
 
 ###################
 ### GIT ALIASES ###

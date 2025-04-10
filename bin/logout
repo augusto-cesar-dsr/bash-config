@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+# Need install rofi, sudo apt install rofi
+# Manage logout with rofi
+
+# option=`echo -e "suspend\nlock screen\nlogout\nreboot\npoweroff\nKill user $USER" | rofi -width 600 -dmenu -p system:`
+option=`echo -e "lock screen\nsuspend\nlogout\nreboot\npoweroff\nKill user $USER" | rofi -width 600 -dmenu -p system`
+case $option in
+  suspend)
+    /usr/bin/systemctl suspend
+    ;;
+  'lock screen')
+    i3lock -t -i $HOME/Imagens/wallpapers/bleach-hueco-mundo.png
+    # gnome-screensaver-command -l
+    ;;
+  logout)
+    gnome-session-quit
+    ;;
+  reboot)
+    /usr/bin/systemctl reboot
+    ;;
+  poweroff)
+    /usr/bin/systemctl poweroff
+    ;;
+  'kill user $USER')
+    loginctl kill-user $USER
+    ;;
+esac

@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Run change monitor position
+option=`echo -e "Above\nLeft\nRight\nBelow\nEnable Audio HDMI\nDisable Audio HDMI\nDisable HDMI-1\nDisable eDP-1\nAdjust resolution" | rofi -width 600 -dmenu -p 'monitor go to'`
+case $option in
+    Above)
+        xrandr --output HDMI-1 --above eDP-1
+        ;;
+    Left)
+        xrandr --output HDMI-1 --left-of eDP-1
+        ;;
+    Right)
+        xrandr --output HDMI-1 --right-of eDP-1
+        ;;
+    Below)
+        xrandr --output HDMI-1 --below eDP-1
+        ;;
+    'Enable Audio HDMI')
+        xrandr --output HDMI-1 --set audio on
+        ;;
+    'Disable Audio HDMI')
+        xrandr --output HDMI-1 --set audio off
+        ;;
+    'Disable HDMI-1')
+        xrandr --output HDMI-1 --off
+        ;;
+    'Disable eDP-1')
+        xrandr --output eDP-1 --off
+        ;;
+    'Adjust resolution')
+        xrandr --output eDP-1 --mode 1366x768
+        xrandr --output HDMI-1 --mode 1920x1200 --auto
+        ;;
+esac
+
+# feh --no-fehbg --bg-fill ~/Imagens/wallpapers/samurai-in-yellow-moon-b8thv0c6ic3nx3bi.jpg

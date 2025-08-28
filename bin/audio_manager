@@ -4,7 +4,7 @@
 sinks=$(pactl list short sinks | cut -f2)
 
 # Usa o rofi pra selecionar
-selected_sink=$(echo "$sinks" | rofi -dmenu -p "Escolha saída de áudio:")
+selected_sink=$(echo "$sinks" | rofi -dmenu -p "Escolha saída de áudio")
 
 # Se o usuário cancelar (nada selecionado), sai
 [ -z "$selected_sink" ] && exit
